@@ -1,0 +1,134 @@
+body {
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.input {
+  padding: 5px 10px;
+  width: 150px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
+  margin: 20px 20px;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.input:focus {
+  width: 200px;
+  border: 1px solid white;
+  box-shadow: 0 0 24px rgb(255, 255, 255);
+}
+
+.search {
+  padding: 10px 20px;
+  margin-left: 20px;
+  cursor: pointer;
+  border: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  animation: shadow 2s infinite;
+}
+
+@keyframes shadow {
+  0% {
+    box-shadow: 0 0 44px rgb(255, 255, 255,0.6);
+  }
+
+  50% {
+    box-shadow: 0 0 44px rgb(255, 255, 255,1);
+
+  }
+   100% {
+    box-shadow: 0 0 44px rgb(255, 255, 255,0.6);
+
+   }
+}
+
+
+
+
+.lds-ellipsis {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+.content {
+  overflow-y: auto;
+  height: 83vh;
+
+}
+
+.images {
+  display: flex;
+  flex-direction: column;
+}
+
+.images .img {
+  transform: scale(0.8);
+  transition: 0.5s;
+}
+
+
+.images .img:hover {
+  transform: scale(1);
+}
+
+
